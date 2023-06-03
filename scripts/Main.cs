@@ -41,15 +41,15 @@ public partial class Main : Node2D
 
         if (Input.IsActionPressed("LMB"))
         {
-            //Fonts
+            //Strings
             DrawString(font, new Vector2(0, 16), "Adjacent Side: " + (MathF.Abs(GetGlobalMousePosition().Y - clickedPosition.Y)).ToString(), HorizontalAlignment.Left, -1, 16, new Color("DD58D6"));
             DrawString(font, new Vector2(0, 40), "Adjacent Side: " + (MathF.Abs(GetGlobalMousePosition().X - clickedPosition.X)).ToString(), HorizontalAlignment.Left, -1, 16, new Color("73BBC9"));
             DrawString(font, new Vector2(0, 64), "Hypotenuse: " + (MathF.Sqrt(MathF.Pow(MathF.Abs(GetGlobalMousePosition().Y - clickedPosition.Y), 2) + MathF.Pow(MathF.Abs(GetGlobalMousePosition().X - clickedPosition.X), 2))).ToString(), HorizontalAlignment.Left, -1, 16, new Color("F2D8D8"));
             
             //Lines
             DrawLine(clickedPosition, GetGlobalMousePosition(), new Color("F2D8D8"), thickness, true); // Hypotenuse
-            DrawLine(clickedPosition, new Vector2(clickedPosition.X, GetGlobalMousePosition().Y), new Color("DD58D6"), thickness, true); // left
-            DrawLine(new Vector2(clickedPosition.X, GetGlobalMousePosition().Y), GetGlobalMousePosition(), new Color("73BBC9"), thickness, true); // bottom
+            DrawLine(clickedPosition, new Vector2(clickedPosition.X, GetGlobalMousePosition().Y), new Color("DD58D6"), thickness, true); // Adjacent side
+            DrawLine(new Vector2(clickedPosition.X, GetGlobalMousePosition().Y), GetGlobalMousePosition(), new Color("73BBC9"), thickness, true); // Adjacent side
 
             //Points
             if (pointsVisible)
