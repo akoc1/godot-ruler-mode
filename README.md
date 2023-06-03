@@ -1,6 +1,5 @@
 # godot-ruler-mode
 
-**Godot Ruler Mode**
 A ruler mode implementation in Godot inspired by Godot.
 
 
